@@ -10,12 +10,69 @@
 
     <!-- tailwind css link -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: "#FF5E19",
+              grayColor: "#151515",
+              darkColor: " #B3B3B3",
+            },
+            fontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+              berkshireSwash: ["Berkshire Swash", "cursive"],
+            },
+            backgroundImage: {
+              banner: "url('../images/shapes/shape-2.png')",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <header>
-      <h1 class="text-5xl text-center">
-        You select the five best footballers of PSG.
-      </h1>
+      <!-- banner start -->
+      <div class="flex gap-8 bg-black pt-24">
+        <div class="">
+          <img
+            class="max-w-none"
+            src="images/header/header-player-1.png"
+            alt=""
+          />
+        </div>
+        <div class="flex items-center justify-center">
+          <div>
+            <h1
+              class="text-6xl font-berkshireSwash text-orange font-normal mb-4"
+            >
+              You select the five best footballers of PSG.
+            </h1>
+            <img class="ml-auto" src="images/shapes/line-1.png " alt="" />
+            <p class="text-xl text-white font- manrope">
+              Paris Saint-Germain Football Club, commonly referred to as Paris
+              Saint-Germain, Paris, Paris SG or simply PSG is a professional
+              football club based in Paris, France. They compete in Ligue 1, the
+              top division of French football.
+            </p>
+          </div>
+        </div>
+        <div class="">
+          <div>
+            <img
+              class="max-w-none"
+              src="images/header/header-player-2.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img class="ml-auto" src="images/header/football.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- banner end -->
     </header>
     <main></main>
 
