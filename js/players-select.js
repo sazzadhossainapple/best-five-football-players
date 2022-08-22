@@ -1,34 +1,41 @@
-function getInputFieldValueById(inputFieldId) {
-  const inputField = document.getElementById(inputFieldId);
-  const inputFieldValueString = inputField.value;
-  const inputFieldValue = parseInt(inputFieldValueString);
-  return inputFieldValue;
-}
-
-function getTextElementValueById(elementId) {
-  const textElement = document.getElementById(elementId);
-  const textElementValueString = textElement.innerText;
-  const textElementValue = parseInt(textElementValueString);
-  return textElementValue;
-}
-function setTextElementValueById(elementId, newValue) {
-  const textElement = document.getElementById(elementId);
-  textElement.innerText = newValue;
-}
-
 const selectButton = document.querySelectorAll(".btn-select");
+
 for (const button of selectButton) {
   button.addEventListener("click", function () {
-    const allPlayerName = button.parentNode.children[0].innerText;
+    const playerName = button.parentNode.children[0].innerText;
 
-    if ((button.disabled = true)) {
-      const listContainer = document.getElementById("player-name-show");
+    const listOderPlayerName = document.getElementById("player-name-show");
 
+    if (listOderPlayerName.children.length < 5) {
+      // create a new li list element.
       const li = document.createElement("li");
-      li.innerText = allPlayerName;
-      listContainer.appendChild(li);
-
+      li.innerText = playerName;
+      listOderPlayerName.appendChild(li);
       button.style.background = "grey";
+    } else {
+      alert("Not allow above five player name. ");
+      return;
     }
+    button.disabled = true;
   });
 }
+
+document.getElementById("btn-calculate").addEventListener("click", function () {
+  const listOderPlayerName = document.getElementById("player-name-show");
+  const perPlayerBudget = getInputFieldValueById("per-player-field");
+
+  if (isNaN(perPlayerBudget) && typeof perPlayerBudget === "number") {
+    alert("Please vaild input number!!");
+    return;
+  } else {
+    if (perPlayerBudget >= 0) {
+      // total player budget calculate.
+      const totalPlayerBudget =
+        perPlayerBudget * listOderPlayerName.children.length;
+      setTextElementValueById("player-expenses", totalPlayerBudget);
+    } else {
+      alert("Nagetive value not a allow!!");
+      return;
+    }
+  }
+});
