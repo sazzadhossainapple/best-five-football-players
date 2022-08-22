@@ -34,7 +34,7 @@
   </head>
   <body>
     <header>
-      <!-- banner start -->
+      <!-- banner  start -->
       <div class="flex gap-8 bg-black pt-24">
         <div class="">
           <img
@@ -77,11 +77,14 @@
     <main>
       <!-- palyers section start -->
       <section class="bg-grayColor">
-        <div class="w-3/4 mx-auto py-16 font- manrope">
-          <div class="grid grid-cols-4 gap-4">
-            <div class="border border-solid border-slate-50">
+        <div
+          class="w-3/4 mx-auto flex lg:flex-row md:flex-col sm:flex-col flex-col gap-4 py-16 font- manrope"
+        >
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+            <!-- player-card-1  -->
+            <div class="border border-solid border-slate-50 bg-black">
               <img class="w-full" src="images/players/player-1.png" alt="" />
-              <div class="text-center py-4 px-2 text-white bg-black">
+              <div class="text-center py-4 px-2 text-white mt-6">
                 <h2 id="player-name" class="text-2xl font-bold player-name">
                   Lionel Messi
                 </h2>
@@ -95,9 +98,11 @@
                 </button>
               </div>
             </div>
-            <div class="border border-solid border-slate-50">
+
+            <!-- player-card-2  -->
+            <div class="border border-solid border-slate-50 bg-black">
               <img src="images/players/player-2.png" alt="" />
-              <div class="text-center py-4 px-2 text-white bg-black">
+              <div class="text-center py-4 px-2 text-white mt-6">
                 <h2 class="text-2xl font-bold player-name">Neymar Jr</h2>
                 <p class="py-3 text-lg text-darkColor">
                   <span>70 Goals</span> . <span>120 Assist</span>
@@ -109,9 +114,11 @@
                 </button>
               </div>
             </div>
-            <div class="border border-solid border-slate-50">
+
+            <!-- player-card-3  -->
+            <div class="border border-solid border-slate-50 bg-black">
               <img src="images/players/player-3.png" alt="" />
-              <div class="text-center py-4 px-2 text-white bg-black">
+              <div class="text-center py-4 px-2 text-white mt-6">
                 <h2 class="text-2xl font-bold player-name">Kylian Mbappé</h2>
                 <p class="py-3 text-lg text-darkColor">
                   <span>60 Goals</span> . <span>80 Assist</span>
@@ -124,11 +131,60 @@
               </div>
             </div>
 
+            <!-- player-card-4  -->
+            <div class="border border-solid border-slate-50 bg-black">
+              <img src="images/players/player-4.png" alt="" />
+              <div class="text-center py-4 px-2 text-white mt-6">
+                <h2 class="text-2xl font-bold player-name">Vítor Machado</h2>
+                <p class="py-3 text-lg text-darkColor">
+                  <span>30 Goals</span> . <span>20 Assist</span>
+                </p>
+                <button
+                  class="bg-blue-600 border-none py-2 px-20 font-bold my-2 btn-select"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+
+            <!-- player-card-5  -->
+            <div class="border border-solid border-slate-50 bg-black">
+              <img src="images/players/player-5.png" alt="" />
+              <div class="text-center py-4 px-2 text-white mt-6">
+                <h2 class="text-2xl font-bold player-name">Sergio Ramos</h2>
+                <p class="py-3 text-lg text-darkColor">
+                  <span>60 Goals</span> . <span>100 Assist</span>
+                </p>
+                <button
+                  class="bg-blue-600 border-none py-2 px-20 font-bold my-2 btn-select"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+
+            <!-- player-card-6  -->
+            <div class="border border-solid border-slate-50 bg-black">
+              <img src="images/players/player-6.png" alt="" />
+              <div class="text-center py-4 px-2 text-white mt-6">
+                <h2 class="text-2xl font-bold player-name">Renato Sanches</h2>
+                <p class="py-3 text-lg text-darkColor">
+                  <span>30 Goals</span> . <span>50 Assist</span>
+                </p>
+                <button
+                  class="bg-blue-600 border-none py-2 px-20 font-bold my-2 btn-select"
+                >
+                  SELECT
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
             <!-- selected five player name start -->
-            <div class="bg-black text-white row-span-1">
+            <div class="bg-black text-white mb-4" style="height: 270px">
               <div class="px-10 py-7">
                 <h2 class="text-center text-2xl mb-2">
-                  Selected - <span id="selected-player-number">0</span>
+                  Selected - <span id="selected-player-number">V</span>
                 </h2>
                 <img
                   class="w-full mx-auto"
@@ -144,52 +200,8 @@
               </div>
             </div>
             <!-- selected five player name end -->
-
-            <div class="border border-solid border-slate-50">
-              <img src="images/players/player-4.png" alt="" />
-              <div class="text-center py-4 px-2 text-white bg-black">
-                <h2 class="text-2xl font-bold player-name">Vítor Machado</h2>
-                <p class="py-3 text-lg text-darkColor">
-                  <span>30 Goals</span> . <span>20 Assist</span>
-                </p>
-                <button
-                  class="bg-blue-600 border-none py-2 px-20 font-bold my-2 btn-select"
-                >
-                  SELECT
-                </button>
-              </div>
-            </div>
-            <div class="border border-solid border-slate-50">
-              <img src="images/players/player-5.png" alt="" />
-              <div class="text-center py-4 px-2 text-white bg-black">
-                <h2 class="text-2xl font-bold player-name">Sergio Ramos</h2>
-                <p class="py-3 text-lg text-darkColor">
-                  <span>60 Goals</span> . <span>100 Assist</span>
-                </p>
-                <button
-                  class="bg-blue-600 border-none py-2 px-20 font-bold my-2 btn-select"
-                >
-                  SELECT
-                </button>
-              </div>
-            </div>
-            <div class="border border-solid border-slate-50">
-              <img src="images/players/player-6.png" alt="" />
-              <div class="text-center py-4 px-2 text-white bg-black">
-                <h2 class="text-2xl font-bold player-name">Renato Sanches</h2>
-                <p class="py-3 text-lg text-darkColor">
-                  <span>30 Goals</span> . <span>50 Assist</span>
-                </p>
-                <button
-                  class="bg-blue-600 border-none py-2 px-20 font-bold my-2 btn-select"
-                >
-                  SELECT
-                </button>
-              </div>
-            </div>
-
             <!-- Budget player start -->
-            <div class="bg-black text-white row-span-2">
+            <div class="bg-black text-white">
               <div class="text-center mb-4 px-10 py-7">
                 <h2 class="text-2xl mb-2">Budget</h2>
                 <img
@@ -199,45 +211,48 @@
                 />
               </div>
 
-              <div class="px-6">
-                <label class="mt-4 block"
-                  >Per Player :
+              <div class="px-6 pb-10">
+                <label class="mt-4 lex justify-between items-center"
+                  >Per Player
                   <input
                     id="per-player-field"
-                    class="border-2 py-2 px-2 bg-transparent w-1/3"
+                    class="border-2 py-2 px-2 bg-transparent w-3/5"
                     type="text"
                 /></label>
                 <button
                   id="btn-calculate"
-                  class="bg-blue-600 border-none py-2 px-16 font-bold my-2 mt-4 mx-auto justify-center flex"
+                  class="bg-blue-600 border-none py-2 px-16 font-bold my-2 mt-4 mx-auto w-full justify-center flex"
                 >
                   Calculate
                 </button>
                 <h2 class="mb-4 mt-4">
-                  Player Expenses : $<span id="player-expenses">00</span>
+                  Player Expenses $<span id="player-expenses">00</span>
                 </h2>
-                <label class="mt-4 block"
-                  >Manager :
+                <label class="mt-4 flex justify-between items-center"
+                  >Manager
                   <input
                     id="manager-field"
-                    class="border-2 py-2 px-2 bg-transparent w-1/3"
+                    class="border-2 py-2 px-2 bg-transparent w-3/5"
                     type="text"
                 /></label>
-                <label class="mt-4 block"
-                  >Coach :
+                <label class="mt-4 flex justify-between items-center"
+                  >Coach
                   <input
                     id="coach-field"
-                    class="border-2 py-2 px-2 bg-transparent w-1/3"
+                    class="border-2 py-2 px-2 bg-transparent w-3/5"
                     type="text"
                 /></label>
                 <button
                   id="btn-calculate-total"
-                  class="bg-blue-600 border-none py-2 px-10 font-bold my-2 mt-4 mx-auto justify-center flex"
+                  class="bg-blue-600 border-none py-2 px-10 font-bold my-2 mt-4 mx-auto w-full justify-center flex"
                 >
                   Calculate Total
                 </button>
-                <h2 class="mt-4 mb-8 flex justify-between">
-                  Total <span>$<span id="total-calculate">00</span></span>
+                <h2 class="mt-4 flex justify-between">
+                  Total
+                  <span class="text-orange"
+                    >$<span id="total-calculate">00</span></span
+                  >
                 </h2>
               </div>
             </div>
